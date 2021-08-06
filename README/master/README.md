@@ -1,4 +1,4 @@
-# [[MCydia/OpeWrt的专用软件包](https://github.com/MCydia/OpeWrt.git)]
+# [[大灰狼/OpeWrt的专用软件包](https://github.com/shidahuilang/langlang)]
 
 #
 #### 分支[master]的为lede源码专用，分支[19.07]的为lienol源码专用，分支[project-18.06]的为project源码专用
