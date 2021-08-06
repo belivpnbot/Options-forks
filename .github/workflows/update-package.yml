@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [master,19.07,kernel，openwrt-18.06，openwrt-21.02，tladg，usb]
+        target: [master,19.07,kernel，openwrt-18.06，openwrt-21.02]
         
     steps:
     - name: Checkout
