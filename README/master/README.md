@@ -1,68 +1,97 @@
-# [[大灰狼/OpeWrt的专用软件包](https://github.com/shidahuilang/langlang)]
+# [[281677160/build-actions的专用软件包](https://github.com/281677160/build-actions)]
 
 #
-#### 分支[master]的为lede源码专用，分支[19.07]的为lienol源码专用，分支[project-18.06]的为project源码专用
+#### [master]分支的为[[lede_source](https://github.com/coolsnowwolf/lede)]源码专用
+#### [19.07]分支的为[[lienol_source](https://github.com/Lienol/openwrt)]源码专用
+#### [openwrt-21.02]分支的为[[Mortal_source](https://github.com/immortalwrt/immortalwrt)]源码专用
+#### 为什么要这样分开呢？因为每个源码作者习惯都不一样，有些源码带了某插件，有些源码又没带，我是尽量的做到源码自带的就用源码自带的，源码没带的就加入，这样就不会重覆了，减少编译错误的概率。
 #
 
 ##### 添加以下插件
-###### [luci-theme-rosy](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#主题-rosy
-###### [luci-theme-edge](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#主题-edge
-###### [luci-theme-opentomcat](#/README.md)  &nbsp;&nbsp;&nbsp;&nbsp;#主题-opentomcat
-###### [luci-theme-opentopd](#/README.md)  &nbsp;&nbsp;&nbsp;&nbsp;#主题-opentopd<br>
-###### [luci-theme-atmaterial](#/README.md)  &nbsp;&nbsp;&nbsp;&nbsp;#atmaterial-主题<br>
-###### [luci-theme-infinityfreedom](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#透明主题<br>
-###### [luci-app-serverchan](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#微信推送<br>
-###### [luci-app-eqos](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#内网控速 内网IP限速工具，和Turbo ACC 网络加速有冲突<br>
-###### [luci-app-jd-dailybonus](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#京东签到<br>
-###### [luci-app-advanced](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#[luci-app-advanced&nbsp;高级设置&nbsp;+&nbsp;luci-app-filebrowser&nbsp;文件浏览器（文件管理）](#/README.md)，luci-app-advanced和luci-app-filebrowser不能同时编译<br>
-###### [luci-app-poweroff](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#关机（增加关机功能）<br>
-###### [luci-theme-argon](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#新的argon主题<br>
-###### [luci-app-argon-config](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#argon主题设置（编译时候选上,在固件的‘系统’里面）<br>
-###### [luci-app-k3screenctrl](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#k3屏幕，k3路由器专用<br>
-###### [luci-app-koolproxyR](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#广告过滤大师 plus+  ，慎用，不懂的话，打开就没网络了<br>
-###### [luci-app-oaf （OpenAppFilter）](#/README.md)  &nbsp;&nbsp;&nbsp;&nbsp;#应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突<br>
-###### [luci-app-gost](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#GO语言实现的安全隧道<br>
-###### [luci-app-cpulimit](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#CPU性能限制<br>
-###### [luci-app-autotimeset](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#定时重启、定时关机、定时重启网络，替代luci-app-autoreboot，[不能同时编译](#/README.md) <br>
-###### [luci-app-control-webrestriction](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#访问限制<br>
-###### [luci-app-control-weburl](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#网址过滤<br>
-###### [luci-app-modeminfo](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#OpenWrt LuCi的3G / LTE加密狗信息<br>
-###### [luci-app-gowebdav](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#GoWebDav 是一个轻巧、简单、快速的 WebDav 服务端程序<br>
-###### [luci-app-smartinfo](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况<br>
-###### [luci-app-pptp-vpnserver-manyusers](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#PPTP VPN 服务器
-###### [luci-app-smartdns](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#smartdns DNS加速<br>
-###### [luci-app-mentohust](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#MentoHUST 的 LuCI 控制界面<br>
-###### [luci-app-adguardhome](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#adguardhome<br>
-###### [luci-app-dockerman](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#docker容器，和源码自带的luci-app-docker[不能同时编译](#/README.md)，同时编译会失败，所以要注意<br>
-###### [luci-app-syncthing](#/README.md)   &nbsp;&nbsp;&nbsp;&nbsp;#Syncthing是一个连续的文件同步程序。它在两台或多台计算机之间同步文件
-###### [luci-app-dnsfilter](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
-###### [luci-app-tencentddns](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#腾讯DDNS
-###### [luci-app-ttnode](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#一个运行在openwrt下的甜糖星愿自动采集插件
-###### [luci-app-serverchand](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#钉钉信息推送
-###### [luci-app-socat](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#端口转发
-###### [luci-app-ddnsto](#/README.md)    &nbsp;&nbsp;&nbsp;&nbsp;#DDNSTO 通过穿透技术，不需要公网 IP 也可以访问内网设备
+###### [luci-app-adblock-plus](#/README.md) &emsp;&emsp; # 拦截广告
+###### [luci-app-adguardhome](#/README.md) &emsp;&emsp; # adguardhome
+###### [luci-app-advanced](#/README.md) &emsp;&emsp; # 高级设置（内置luci-app-fileassistant文件助手）
+###### [luci-app-aliddns](#/README.md) &emsp;&emsp; # 阿里DDNS
+###### [luci-app-amlogic](#/README.md) &emsp;&emsp; # N1和晶晨系列盒子写入EMMC插件
+###### [luci-app-argon-config](#/README.md) &emsp;&emsp; # argon主题设置,要配合argon主题使用
+###### [luci-app-clash](#/README.md) &emsp;&emsp; # clash
+###### [luci-app-control-timewol](#/README.md) &emsp;&emsp; # 定时网络设备唤醒
+###### [luci-app-control-webrestriction](#/README.md) &emsp;&emsp; # 访问限制
+###### [luci-app-control-weburl](#/README.md) &emsp;&emsp; # 网址过滤
+###### [luci-app-cpulimit](#/README.md) &emsp;&emsp; # CPU性能调整
+###### [luci-app-cupsd](#/README.md) &emsp;&emsp; # CUPS 打印服务器
+###### [luci-app-ddnsto](#/README.md) &emsp;&emsp; # 内网穿透
+###### [luci-app-dockerman](#/README.md) &emsp;&emsp; # docker附带控制面板
+###### [luci-app-eqos](#/README.md) &emsp;&emsp; # 网速限制
+###### [luci-app-filebrowser](#/README.md) &emsp;&emsp; # 文件管理器
+###### [luci-app-godproxy](#/README.md) &emsp;&emsp; # 拦截广告
+###### [luci-app-gost](#/README.md) &emsp;&emsp; # GO语言实现的安全隧道
+###### [luci-app-gowebdav](#/README.md) &emsp;&emsp; # GoWebDav 是一个轻巧、简单、快速的 WebDav 服务端程序
+###### [luci-app-ipsec-vpnserver-manyusers](#/README.md) &emsp;&emsp; # ipsec-vpn
+###### [luci-app-iptvhelper](#/README.md) &emsp;&emsp; # iptvhelper,帮助你轻松配置IPTV
+###### [luci-app-linkease](#/README.md) &emsp;&emsp; # 易有云文件管理器
+###### [luci-app-k3screenctrl](#/README.md) &emsp;&emsp; # K3屏幕
+###### [luci-app-koolddns](#/README.md) &emsp;&emsp; # 支持阿里DDNS、DnsPod动态域名解析
+###### [luci-app-mentohust](#/README.md) &emsp;&emsp; # 锐捷验证
+###### [luci-app-netdata](#/README.md) &emsp;&emsp; # 实时监控中文版
+###### [luci-app-netkeeper-interception](#/README.md) &emsp;&emsp; # 闪讯拦截,闪讯拨号
+###### [luci-app-oaf](#/README.md) &emsp;&emsp; # 应用过滤
+###### [luci-app-onliner](#/README.md) &emsp;&emsp; # 流量监控
+###### [luci-app-openclash](#/README.md) &emsp;&emsp; # openclash
+###### [luci-app-oscam](#/README.md) &emsp;&emsp; # OSCAM服务器
+###### [luci-app-poweroff](#/README.md) &emsp;&emsp; # 关机
+###### [luci-app-pppoe-server](#/README.md) &emsp;&emsp; # 宽带接入认证服务器
+###### [luci-app-pushbot](#/README.md) &emsp;&emsp; # 钉钉推送（微信推送修改版）
+###### [luci-app-rebootschedule](#/README.md) &emsp;&emsp; # 多功能定时任务（重启网络、重启系统、重启WIFI、重新拨号...）
+###### [luci-app-serverchan](#/README.md) &emsp;&emsp; # 微信推送
+###### [luci-app-smartdns](#/README.md) &emsp;&emsp; # smartdns
+###### [luci-app-smartinfo](#/README.md) &emsp;&emsp; # 穿越蓝天磁盘监控
+###### [luci-app-socat](#/README.md) &emsp;&emsp; # 多功能的网络工具
+###### [luci-app-switch-lan-play](#/README.md) &emsp;&emsp; # 虚拟局域网联机工具
+###### [luci-app-syncthing](#/README.md) &emsp;&emsp; # syncthing同步工具
+###### [luci-app-tencentddns](#/README.md) &emsp;&emsp; # 腾讯DDNS
+###### [luci-app-timecontrol](#/README.md) &emsp;&emsp; # 时间控制跟（luci-app-accesscontrol）差不多，不同的是这个可以配合高级设置一起使用
+###### [luci-app-ttnode](#/README.md) &emsp;&emsp; # 甜糖星愿自动采集插件
+###### [luci-theme-argon](#/README.md) &emsp;&emsp; # argon主题
+###### [luci-theme-atmaterial](#/README.md) &emsp;&emsp; # atmaterials三合一主题
+###### [luci-theme-edge](#/README.md) &emsp;&emsp; # edge主题
+###### [luci-theme-infinityfreedom](#/README.md) &emsp;&emsp; # infinityfreedom主题
+###### [luci-theme-opentomato](#/README.md) &emsp;&emsp; # opentomato主题
+###### [luci-theme-opentomcat](#/README.md) &emsp;&emsp; # opentomcat主题
+###### [luci-theme-rosy](#/README.md) &emsp;&emsp; # rosy主题
+###### [luci-theme-darkmatter](#/README.md) &emsp;&emsp; # 黑色主题
 #
 
-- 编译luci-app-advanced时候自动带上luci-app-filebrowser ，高级设置+文件浏览器（文件管理），所以luci-app-advanced和luci-app-filebrowser不能同时编译，只能二选一
+#
+```
+luci-app-samba 和 luci-app-samba4 不能同时编译，同时编译会失败
 
-- luci-app-samba 和 luci-app-samba4 不能同时编译，同时编译会失败
-- 想选择luci-app-samba4，首先在Extra packages ---> 把autosamba取消，在选择插件的那里把luci-app-samba取消，然后在Network ---> 把 samba36-server取消，最后选择luci-app-samba4，记得顺序别搞错
+想选择luci-app-samba4，首先在Extra packages ---> 把autosamba取消，在选择插件的那里把luci-app-samba取消，
+然后在Network ---> 把 samba36-server取消，最后选择luci-app-samba4，记得顺序别搞错
+```
+```
+luci-app-dockerman 和 luci-app-docker 不能同时编译，同时编译会编译失败
 
-- luci-app-dockerman 和 luci-app-docker 不能同时编译，同时编译会编译失败
-- 编译luci-app-dockerman或者luci-app-docker，首先要在Global build settings ---> Enable IPv6 support in packages (NEW)（选上）
+想要编译luci-app-dockerman或者luci-app-docker
 
-- luci-app-autotimeset 和 luci-app-autoreboot 不能同时编译，同时编译会编译失败
-
-- luci-app-ddnsto  如果有兼容性问题，安装好固件后执行 `/etc/init.d/ddnsto enable` 命令，这个插件是由两部分组成的，有一部分在Network --->里面默认自动选择的，如果你不需要这个插件，又不想默选择这个的话，在.config的配置文件里面加入一句 `# CONFIG_PACKAGE_ddnsto is not set` 就行，一般不是太小的闪存机子都不需要理会这个东西的，x86的除外，其他机子编译时候增加这个插件会有编译失败风险，实在想用的话，就编译好固件后再用命令安装插件好了
+首先要在Global build settings ---> Enable IPv6 support in packages (NEW)（选上）
+```
+```
+luci-app-ddnsto  如果有兼容性问题，安装好固件后执行 /etc/init.d/ddnsto enable 命令
+```
+```
+luci-app-advanced  已内置luci-app-fileassistant文件助手，切莫同时编译他们
+```
 #
 #
-##### 如果还是没有你需要的插件，请不要一下子就拉取别人的插件包
+##### 如果您是配合我的仓库一起使用的话，这里没有你需要的插件，请不要一下子就拉取别人的插件包
 ##### 相同的文件都拉一起，因为有一些可能还是其他大神修改过的容易造成编译错误的
 ##### 想要什么插件就单独的拉取什么插件就好，或者告诉我，我把插件放我的插件包就行了
+##### 《[单独拉取插件说明](https://github.com/danshui-git/shuoming/blob/master/ming.md)》 ，里面包含各种命令简单说明
 #
 #
 ## 感谢各位大神的源码，openwrt有各位大神而精彩，感谢！感谢！，插件每天白天12点跟晚上12点都同步一次各位大神的源码！
 
 #
 
-# 请不要Fork此仓库，你Fork后，插件不会自动根据作者更新而更新，还会有极大的机会中炸弹（💣 💣 💣）的危险，重要的事说三遍，请不要请不要Fork此仓库,请不要Fork此仓库,请不要Fork此仓库 😄
+# 请不要Fork此仓库，你Fork后，插件不会自动根据作者更新而更新!!!!!!!!!!!

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
   schedule:
-    - cron: 40 5 * * 6
+    - cron: 40 3 * * *
 
 env: 
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [master,19.07,openwrt-18.06,openwrt-21.02,kernel,openwrt-18.06-k5.4]
+        target: [master,19.07,openwrt-21.02,lede-17.01]
         
     steps:
     - name: Checkout
@@ -34,17 +34,17 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-        
+
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x ${{matrix.target}}.sh
-        git clone -b ${{matrix.target}} https://github.com/shidahuilang/openwrt-package.git ${{matrix.target}}
+        git clone -b ${{matrix.target}} https://github.com/281677160/openwrt-package.git ${{matrix.target}}
         cd ${{matrix.target}}
         rm -Rf *
         git rm --cache *
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
-
+    
     - name: Upload
       env: 
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
@@ -54,4 +54,4 @@ jobs:
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)"
-        git push --quiet "https://${{ secrets.REPO_TOKEN }}@github.com/shidahuilang/openwrt-package.git" HEAD:${{matrix.target}} 
+        git push --quiet "https://${{ secrets.REPO_TOKEN }}@github.com/281677160/openwrt-package.git" HEAD:${{matrix.target}} 
