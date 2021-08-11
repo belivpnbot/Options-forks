@@ -117,6 +117,8 @@ EOF
 
 chmod -R 775 feeds/luci/applications/luci-app-rebootschedule
 
+# 判断变量值，如果有效发送微信通知
+if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCT18103TNKBuiwMdcCJK5GWIM7mloVdX.send?text=$FOLDERSX--同步失败; fi
 
 # 删除拉取插件后残留的.git和.svn,再随带删除各种README说明
 find ./*/ -name '.git' | xargs -i rm -rf {}
