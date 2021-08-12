@@ -120,6 +120,10 @@ chmod -R 775 feeds/luci/applications/luci-app-rebootschedule
 # 判断变量值，如果有效发送微信通知
 if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCT18103TNKBuiwMdcCJK5GWIM7mloVdX.send?text=$FOLDERSX--同步失败; fi
 
+#TG通知
+if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码同步失败，分支：Package_$matrix_target，失败列表：$FOLDERSX......"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码同步成功，分支：Package_$matrix_target......"; fi
+
+
 # 删除拉取插件后残留的.git和.svn,再随带删除各种README说明
 find ./*/ -name '.git' | xargs -i rm -rf {}
 find . -name '.svn' | xargs -i rm -rf {}
