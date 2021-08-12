@@ -231,7 +231,7 @@ FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码同步失败，分支：Package_$matrix_target，失败列表：$FOLDERSX......"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码同步成功，分支：Package_$matrix_target......"; fi
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCT18103TNKBuiwMdcCJK5GWIM7mloVdX.send?text=$FOLDERSX--同步失败; fi
+if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCKEY.send?text=$FOLDERSX--同步失败; fi
 
 
 # 删除对比更新目录列表
