@@ -60,7 +60,7 @@ svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/themes/luci-th
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/themes/luci-theme-opentomcat feeds/luci/themes/luci-theme-opentomcat
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/themes/luci-theme-rosy feeds/luci/themes/luci-theme-rosy
 svn co https://github.com/jerrykuku/luci-theme-argon/branches/18.06 feeds/luci/themes/luci-theme-argon
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial feeds/luci/themes/luci-theme-atmaterial
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new feeds/luci/themes/luci-theme-atmaterial_new
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomato feeds/luci/themes/luci-theme-opentomato
 svn co https://github.com/apollo-ng/luci-theme-darkmatter/trunk  package/luci-theme-darkmatter
 svn co https://github.com/Aslin-Ameng/luci-theme-Light/trunk feeds/luci/themes/luci-theme-Light
