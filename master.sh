@@ -180,7 +180,7 @@ luci-app-timecontrol
 luci-app-ttnode
 luci-app-vssr
 luci-theme-argon
-luci-theme-atmaterial
+luci-theme-atmaterial_new
 luci-theme-infinityfreedom
 luci-theme-opentomcat
 luci-theme-opentomato
