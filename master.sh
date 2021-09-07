@@ -34,7 +34,8 @@ git clone https://github.com/esirplayground/luci-app-poweroff feeds/luci/applica
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-pppoe-server feeds/luci/applications/luci-app-pppoe-server
 git clone https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
 svn co https://github.com/msylgj/luci-app-tencentddns/trunk feeds/luci/applications/luci-app-tencentddns
-svn co https://github.com/jerrykuku/luci-app-ttnode/trunk/ttnode/luci-app-ttnode feeds/luci/applications/luci-app-ttnode
+#svn co https://github.com/jerrykuku/luci-app-ttnode/trunk/ttnode/luci-app-ttnode feeds/luci/applications/luci-app-ttnode
+git clone https://github.com/jerrykuku/luci-app-ttnode feeds/luci/applications/luci-app-ttnode
 svn co https://github.com/jerrykuku/luci-app-argon-config/trunk feeds/luci/applications/luci-app-argon-config
 svn co https://github.com/lwz322/luci-app-k3screenctrl/trunk feeds/luci/applications/luci-app-k3screenctrl
 svn co https://github.com/pymumu/luci-app-smartdns/branches/lede feeds/luci/applications/luci-app-smartdns
