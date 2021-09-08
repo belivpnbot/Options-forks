@@ -40,7 +40,7 @@ svn co https://github.com/jerrykuku/luci-app-argon-config/trunk feeds/luci/appli
 svn co https://github.com/lwz322/luci-app-k3screenctrl/trunk feeds/luci/applications/luci-app-k3screenctrl
 svn co https://github.com/pymumu/luci-app-smartdns/branches/lede feeds/luci/applications/luci-app-smartdns
 svn co https://github.com/project-lede/luci-app-godproxy/trunk feeds/luci/applications/luci-app-godproxy
-svn co https://github.com/awesome-openwrt/luci-app-fileassistant/trunk feeds/luci/applications/luci-app-fileassistant
+svn co https://github.com/awesome-openwrt/luci-app-fileassistant/trunk feeds/luci/applications/luci-app-fileassistant sed -i '/我的/d' feeds/luci/applications/luci-app-fileassistant/luasrc/controller/fileassistant.lua
 
 # luci-app和luci-theme插件的依赖
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/utils/cpulimit-ng feeds/packages/utils/cpulimit-ng
