@@ -41,8 +41,8 @@ svn co https://github.com/lwz322/luci-app-k3screenctrl/trunk feeds/luci/applicat
 svn co https://github.com/pymumu/luci-app-smartdns/branches/lede feeds/luci/applications/luci-app-smartdns
 svn co https://github.com/project-lede/luci-app-godproxy/trunk feeds/luci/applications/luci-app-godproxy
 #文件助手
-svn co https://github.com/awesome-openwrt/luci-app-fileassistant/trunk feeds/luci/applications/luci-app-fileassistant 
-sed -i '/我的/d' feeds/luci/applications/luci-app-fileassistant/luasrc/controller/fileassistant.lua
+svn co https://github.com/shidahuilang/luci-app-fileassistant/trunk feeds/luci/applications/luci-app-fileassistant 
+#sed -i '/我的/d' feeds/luci/applications/luci-app-fileassistant/luasrc/controller/fileassistant.lua
 
 
 # luci-app和luci-theme插件的依赖
