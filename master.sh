@@ -108,7 +108,7 @@ svn co https://github.com/281677160/AdGuardHome/trunk/luci-app-adguardhome feeds
 svn co https://github.com/281677160/AdGuardHome/trunk/adguardhome feeds/packages/net/adguardhome
 
 # ddnsto插件
-svn co https://github.com/linkease/nas-packages-luci/tree/main/luci/luci-app-ddnsto feeds/luci/applications/luci-app-ddnsto
+svn co https://github.com/linkease/nas-packages-luci/luci/luci-app-ddnsto feeds/luci/applications/luci-app-ddnsto
 
 
 # 增加filebrowser的用户名跟密码提示
