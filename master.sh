@@ -68,7 +68,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/switch-lan-play feeds/
 
 
 # luci-app-netdata
-git clone https://github.com/sirpdboy/luci-app-netdata feeds/luci/applications/luci-app-netdata
+svn co https://github.com/sirpdboy/luci-app-netdata feeds/luci/applications/luci-app-netdata
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/luci/applications/luci-app-netdata
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/net/netdata
 
@@ -107,7 +107,7 @@ svn co https://github.com/281677160/AdGuardHome/trunk/luci-app-adguardhome feeds
 svn co https://github.com/281677160/AdGuardHome/trunk/adguardhome feeds/packages/net/adguardhome
 
 # ddnsto插件
-git clone https://github.com/shidahuilang/luci-app-ddnsto feeds/luci/applications/luci-app-ddnsto
+svn co https://github.com/linkease/ddnsto-openwrt/trunk/luci-app-ddnsto feeds/luci/applications/luci-app-ddnsto
 
 
 # 增加filebrowser的用户名跟密码提示
