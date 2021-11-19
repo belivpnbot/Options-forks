@@ -61,6 +61,7 @@ svn co https://github.com/coolsnowwolf/packages/trunk/utils/syncthing feeds/pack
 
 # luci-app-netdata
 git clone https://github.com/sirpdboy/luci-app-netdata feeds/luci/applications/luci-app-netdata
+git clone https://github.com/sirpdboy/luci-app-netdata feeds/packages/net/netdata
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/luci/applications/luci-app-netdata
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/net/netdata
 
