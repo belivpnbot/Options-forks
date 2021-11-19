@@ -60,8 +60,9 @@ svn co https://github.com/coolsnowwolf/packages/trunk/utils/syncthing feeds/pack
 
 
 # luci-app-netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/luci/applications/luci-app-netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/net/netdata
+git clone https://github.com/sirpdboy/luci-app-netdata feeds/luci/applications/luci-app-netdata
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/luci/applications/luci-app-netdata
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/net/netdata
 
 
 # N1和晶晨系列盒子专用的安装和升级固件工具
