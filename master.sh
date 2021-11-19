@@ -68,7 +68,8 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/switch-lan-play feeds/
 
 
 # luci-app-netdata
-svn co https://github.com/sirpdboy/trunk/luci-app-netdata feeds/luci/applications/luci-app-netdata
+svn co https://github.com/sirpdboy/luci-app-netdata feeds/luci/applications/luci-app-netdata
+svn co https://github.com/sirpdboy/luci-app-netdata feeds/packages/net/netdata
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/luci/applications/luci-app-netdata
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/net/netdata
 
