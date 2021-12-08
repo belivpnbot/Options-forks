@@ -75,7 +75,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/switch-lan-play feeds/
 #svn co https://github.com/sirpdboy/luci-app-netdata/trunk feeds/packages/net/netdata
 
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata feeds/luci/applications/luci-app-netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata package/netdata
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/net/netdata
 
 
 # N1和晶晨系列盒子专用的安装和升级固件工具
