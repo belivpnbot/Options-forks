@@ -97,7 +97,7 @@ rm -rf feeds/packages/net/luci-app-openclash
 rm -rf feeds/packages/net/img
 svn co https://github.com/frainzy1477/luci-app-clash/trunk feeds/luci/applications/luci-app-clash
 svn co https://github.com/shidahuilang/OpenClash feeds/luci/applications/luci-app-openclash
-svn co https://github.com/shidahuilang/OpenClash/trunk feeds/packages/net
+svn co https://github.com/shidahuilang/OpenClash feeds/packages/net
 
 
 # luci-theme主题插件
