@@ -90,14 +90,14 @@ svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-dock
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk feeds/luci/applications/luci-app-vssr
 svn co https://github.com/jerrykuku/lua-maxminddb/trunk feeds/packages/utils/lua-maxminddb
 
-svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-openclash feeds/luci/applications/luci-app-openclash
-svn co https://github.com/vernesong/OpenClash/trunk feeds/packages/net
+#svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-openclash feeds/luci/applications/luci-app-openclash
+#svn co https://github.com/vernesong/OpenClash/trunk feeds/packages/net
 
 rm -rf feeds/packages/net/luci-app-openclash
 rm -rf feeds/packages/net/img
 svn co https://github.com/frainzy1477/luci-app-clash/trunk feeds/luci/applications/luci-app-clash
-#svn co https://github.com/shidahuilang/OpenClash/trunk feeds/luci/applications/luci-app-openclash
-#svn co https://github.com/shidahuilang/OpenClash/trunk feeds/packages/net
+svn co https://github.com/shidahuilang/OpenClash/trunk feeds/luci/applications/luci-app-openclash
+svn co https://github.com/shidahuilang/OpenClash/trunk feeds/packages/net
 
 
 # luci-theme主题插件
